@@ -1,0 +1,23 @@
+.error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 139px;
+    margin: 139px 0;
+    color: $color-1;
+
+    h1 {
+        font-size: 288px;
+    }
+
+    p {
+        font-size: 36px;
+    }
+
+    a {
+        font-size: 1rem;
+        color: $color-1;
+        text-decoration-line: underline;
+    }
+}

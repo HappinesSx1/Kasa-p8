@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "font-1";
+    src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+
+$color-1 : #FF6060;
+$black-1 : #000;
+$white-1 : #FFF;
+$light-gray-1 : #F6F6F6;
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 45px;
+    font-family: font-1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

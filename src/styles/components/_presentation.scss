@@ -1,0 +1,176 @@
+.header-img-container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 50px auto;
+    color: $color-1;
+
+
+    .slider-container {
+        position: relative;
+
+        .slider-arrow {
+            position: absolute;
+            height: 79px;
+            width: 46px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .arrow-left {
+            left: 15px;
+            // transform: rotate(-90deg);
+        }
+        .arrow-right {
+            right: 15px;
+        }
+
+        .slider{
+            height: 415px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+        
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-container {
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 500;
+            }
+            p {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .tags {
+                margin-top: 18px;
+                display: flex;
+                gap: 10px;
+                li {
+                    text-align: center;
+                    background: $color-1;
+                    color: $white-1;
+                    min-width: 115px;
+                    border-radius: 7px;
+                    font-size: 0.8rem;
+                    padding: 2px 8px;
+                }
+            }
+        }
+
+
+        .owner-container {
+            
+            .owner {
+                @include verticalCenter;
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .rolling-container {
+        display: flex;
+        align-items:flex-start;
+        gap: 76px;
+        margin-top: 25px;
+
+        .deroulant {
+            width: 100%;
+
+            .main-deroulant {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px 10px 10px;
+                border-radius: 10px;
+                background: $color-1;
+                color: $white-1;
+                cursor: pointer;
+                transition: 0.3s;
+
+                h2 {
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    transition: transform 0.3s ease;
+
+                    &.collapsed {
+                        transform: rotate(0deg);
+                    }
+                    &.expanded {
+                        transform: rotate(180deg);
+                    }
+                }
+                span {
+                    @include verticalCenter;
+                    width: 32px;
+                    height: 32px;
+                    font-size: 1.8rem;
+                    transition: transform 0.3s ease;
+                    transform: rotate(90deg);
+
+                    &.collapsed {
+                        transform: rotate(0deg);
+                    }
+                    &.expanded {
+                        transform: rotate(180deg);
+                    }
+                }
+
+            }
+
+            p , ul {
+                max-height: 230px;
+                background: $light-gray-1;
+                padding: 15px 8px;
+                font-size: 1rem;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header-img-container {
+        padding: 0 20px;
+        margin: 27px 0 0;
+
+        .header-container {
+            flex-direction: column;
+            align-items: start;
+
+            .owner-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                .owner {
+                    h3 {
+                        font-size: 12px;
+                    }
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+
+        .rolling-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

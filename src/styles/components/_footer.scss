@@ -1,0 +1,36 @@
+footer {
+    background: $black-1;
+    @include verticalCenter;
+    flex-direction: column;
+    gap: 28px;
+    padding: 66px 0 29px;
+
+    .footer-logo {
+        img {
+            height: 40px;
+        }
+    }
+
+    .sous-titre {
+        p {
+            color: $white-1;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    footer {
+        margin-top: 27px;
+        padding: 66px 120px 58px;
+        justify-content: flex-end;
+        gap: 0;
+
+        .sous-titre {
+
+            p {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+}
