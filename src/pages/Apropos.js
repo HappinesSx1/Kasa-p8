@@ -4,15 +4,11 @@ import Footer from "../components/Footer";
 import arrow from "../assets/icones/arrow_back_ios-24px 2.png";
 
 const Apropos = () => {
-  const [isActiveDesc, setIsActiveDesc] = useState(false);
   const [isActiveFlabilité, setIsActiveFlabilité] = useState(false);
   const [isActiveRespect, setIsActiveRespect] = useState(false);
   const [isActiveService, setIsActiveService] = useState(false);
   const [isActiveSécurité, setIsActiveSécurité] = useState(false);
 
-  const handleClickDesc = () => {
-    setIsActiveDesc((current) => !current);
-  };
   const handleClickFlabilité = () => {
     setIsActiveFlabilité((current) => !current);
   };
@@ -90,7 +86,7 @@ const Apropos = () => {
           </div>
           {isActiveService && (
             <p>
-              Ka bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+              La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
               comportement discriminatoire ou de perturbation du voisinage
               entraïnera une exclusion de notre plateforme.
             </p>

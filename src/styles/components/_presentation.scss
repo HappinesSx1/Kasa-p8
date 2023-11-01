@@ -17,7 +17,6 @@
         }
         .arrow-left {
             left: 15px;
-            // transform: rotate(-90deg);
         }
         .arrow-right {
             right: 15px;
@@ -91,7 +90,6 @@
                 background: $color-1;
                 color: $white-1;
                 cursor: pointer;
-                transition: 0.3s;
 
                 h2 {
                     cursor: pointer;
@@ -106,28 +104,17 @@
                     transition: transform 0.3s ease;
 
                     &.collapsed {
-                        transform: rotate(0deg);
-                    }
-                    &.expanded {
                         transform: rotate(180deg);
                     }
-                }
-                span {
-                    @include verticalCenter;
-                    width: 32px;
-                    height: 32px;
-                    font-size: 1.8rem;
-                    transition: transform 0.3s ease;
-                    transform: rotate(90deg);
-
-                    &.collapsed {
-                        transform: rotate(0deg);
-                    }
                     &.expanded {
-                        transform: rotate(180deg);
+                        transform: rotate(0deg);
                     }
                 }
 
+            }
+
+            .main-deroulant img.collapsed p {
+                color: yellow;
             }
 
             p , ul {
@@ -136,8 +123,16 @@
                 padding: 15px 8px;
                 font-size: 1rem;
                 line-height: 25px;
+                transition: transform 2s ease;
             }
         }
+    }
+}
+
+@keyframes ouverture {
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 

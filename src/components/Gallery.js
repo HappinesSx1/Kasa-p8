@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "./Card";
 import { NavLink } from "react-router-dom";
 import dataB from "../Logement.json";
 
 const Gallery = () => {
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:3004/database`)
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data));
-  // }, []);
-
   return (
     <main>
       <div className="main-bg">
