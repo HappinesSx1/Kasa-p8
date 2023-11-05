@@ -1,33 +1,8 @@
 .header-img-container {
     max-width: 1240px;
     width: 100%;
-    margin: 50px auto;
+    margin: 50px auto 20px;
     color: $color-1;
-
-
-    .slider-container {
-        position: relative;
-
-        .slider-arrow {
-            position: absolute;
-            height: 79px;
-            width: 46px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .arrow-left {
-            left: 15px;
-        }
-        .arrow-right {
-            right: 15px;
-        }
-
-        .slider{
-            height: 415px;
-            width: 100%;
-            object-fit: cover;
-        }
-    }
         
     .header-container {
         display: flex;
@@ -64,6 +39,16 @@
             
             .owner {
                 @include verticalCenter;
+                gap: 10px;
+
+                h3 {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        text-align: end;
+                    }
+                }
                 img {
                     width: 64px;
                     height: 64px;
@@ -90,6 +75,7 @@
                 background: $color-1;
                 color: $white-1;
                 cursor: pointer;
+                position: relative;
 
                 h2 {
                     cursor: pointer;
@@ -111,19 +97,25 @@
                     }
                 }
 
-            }
 
-            .main-deroulant img.collapsed p {
-                color: yellow;
             }
-
             p , ul {
-                max-height: 230px;
                 background: $light-gray-1;
                 padding: 15px 8px;
                 font-size: 1rem;
                 line-height: 25px;
-                transition: transform 2s ease;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: opacity 0.5s ease, max-height 0.5s ease;
+            }
+
+            .dropdown-exit {
+                max-height: 250px;
+                padding: 15px 8px;
+                opacity: 1;
+                max-height: 200px; /* ou toute autre valeur appropriée */
+                transition: opacity 0.5s ease, max-height 0.5s ease;
             }
         }
     }
@@ -136,14 +128,52 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1250px) {
+    .header-img-container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
     .header-img-container {
         padding: 0 20px;
         margin: 27px 0 0;
 
+        .slider-container {
+
+            .slider-arrow {
+                height: 24px;
+                width: 24px;
+            }
+            .slider {
+                height: 255px;
+            }
+
+            .cont-container {
+                p {
+                    display: none;
+                }
+            }
+        }
+
         .header-container {
             flex-direction: column;
             align-items: start;
+
+            .title-container {
+                h2 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 14px;
+                }
+                .tags {
+                    li {
+                        font-size: 10px;
+                        min-width: 84px;
+                    }
+                }
+            }
 
             .owner-container {
                 width: 100%;
@@ -160,12 +190,38 @@
                         height: 32px;
                     }
                 }
+
+                .note {
+                    .stars-container {
+                        .star {
+                            img {
+                                height: 18px;
+                            }
+                        }
+                    }
+                }
             }
         }
 
         .rolling-container {
             flex-direction: column;
             gap: 20px;
+
+            .deroulant {
+                
+                .main-deroulant {
+                    height: 30px;
+                    padding: 10px;
+
+                    h2 {
+                        font-size: 13px;
+                    }
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
         }
     }
 }

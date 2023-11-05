@@ -53,7 +53,13 @@ nav {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1250px) {
+  nav {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 650px) {
   nav {
     padding: 0 20px;
     
@@ -77,3 +83,12 @@ nav {
       }
     }
   }
+
+@media screen and (max-width: 360px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}

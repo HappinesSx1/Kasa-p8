@@ -1,0 +1,34 @@
+.slider-container {
+    position: relative;
+
+    .slider-arrow {
+        position: absolute;
+        height: 79px;
+        width: 46px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .arrow-left {
+        left: 15px;
+    }
+    .arrow-right {
+        right: 15px;
+    }
+
+    .slider{
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .cont-container {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white-1;
+        p {
+            font-size: 18px;
+        }
+    }
+}
