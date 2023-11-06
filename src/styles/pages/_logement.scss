@@ -57,75 +57,6 @@
             }
         }
     }
-
-    .rolling-container {
-        display: flex;
-        align-items:flex-start;
-        gap: 76px;
-        margin-top: 25px;
-
-        .deroulant {
-            width: 100%;
-
-            .main-deroulant {
-                display: flex;
-                align-items: center;
-                padding: 10px 20px 10px 10px;
-                border-radius: 10px;
-                background: $color-1;
-                color: $white-1;
-                cursor: pointer;
-                position: relative;
-
-                h2 {
-                    cursor: pointer;
-                    width: 100%;
-                    font-size: 1rem;
-                    font-weight: 500;
-                }
-
-                img {
-                    width: 32px;
-                    height: 32px;
-                    transition: transform 0.3s ease;
-
-                    &.collapsed {
-                        transform: rotate(180deg);
-                    }
-                    &.expanded {
-                        transform: rotate(0deg);
-                    }
-                }
-
-
-            }
-            p , ul {
-                background: $light-gray-1;
-                padding: 15px 8px;
-                font-size: 1rem;
-                line-height: 25px;
-                opacity: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: opacity 0.5s ease, max-height 0.5s ease;
-            }
-
-            .dropdown-exit {
-                max-height: 250px;
-                padding: 15px 8px;
-                opacity: 1;
-                max-height: 200px; /* ou toute autre valeur appropriée */
-                transition: opacity 0.5s ease, max-height 0.5s ease;
-            }
-        }
-    }
-}
-
-@keyframes ouverture {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 @media screen and (max-width: 1250px) {
@@ -138,23 +69,6 @@
     .header-img-container {
         padding: 0 20px;
         margin: 27px 0 0;
-
-        .slider-container {
-
-            .slider-arrow {
-                height: 24px;
-                width: 24px;
-            }
-            .slider {
-                height: 255px;
-            }
-
-            .cont-container {
-                p {
-                    display: none;
-                }
-            }
-        }
 
         .header-container {
             flex-direction: column;
@@ -198,27 +112,6 @@
                                 height: 18px;
                             }
                         }
-                    }
-                }
-            }
-        }
-
-        .rolling-container {
-            flex-direction: column;
-            gap: 20px;
-
-            .deroulant {
-                
-                .main-deroulant {
-                    height: 30px;
-                    padding: 10px;
-
-                    h2 {
-                        font-size: 13px;
-                    }
-                    img {
-                        width: 16px;
-                        height: 16px;
                     }
                 }
             }

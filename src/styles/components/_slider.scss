@@ -32,3 +32,23 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+
+    .slider-container {
+        
+        .slider-arrow {
+            height: 24px;
+            width: 24px;
+        }
+        .slider {
+            height: 255px;
+        }
+        
+        .cont-container {
+            p {
+            display: none;
+            }
+        }
+    }
+}
