@@ -5,11 +5,11 @@ import Gallery from "../components/Gallery";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navigation />
       <Gallery />
       <Footer />
-    </div>
+    </>
   );
 };
 

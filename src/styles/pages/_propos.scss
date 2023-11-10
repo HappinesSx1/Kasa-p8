@@ -51,20 +51,19 @@ main {
         }
         p {
             background: $light-gray-1;
+            color: $color-1;
             font-size: 1rem;
             line-height: 25px;
-            opacity: 0;
+            padding: 0 8px;
             max-height: 0;
             overflow: hidden;
-            transition: opacity 0.5s ease, max-height 0.5s ease;
+            transition: max-height 0.4s ease, padding 0.4s ease;
         }
 
         .dropdown-exit {
             max-height: 250px;
             padding: 15px 8px;
-            opacity: 1;
-            max-height: 200px; /* ou toute autre valeur appropriée */
-            transition: opacity 0.5s ease, max-height 0.5s ease;
+            transition: padding 0.4s ease, max-height 0.4s ease;
         }
     }
 }

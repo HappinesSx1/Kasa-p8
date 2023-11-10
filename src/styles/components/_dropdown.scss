@@ -6,6 +6,7 @@
 
     .deroulant {
         width: 100%;
+        margin-bottom: -30px;
 
         .main-deroulant {
             display: flex;
@@ -54,8 +55,9 @@
             max-height: 250px;
             padding: 15px 8px;
             opacity: 1;
-            max-height: 200px; /* ou toute autre valeur appropriée */
+            max-height: 200px;
             transition: opacity 0.5s ease, max-height 0.5s ease;
+            margin-bottom: 30px;
         }
     }
 }
