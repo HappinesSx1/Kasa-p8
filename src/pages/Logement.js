@@ -5,7 +5,7 @@ import Etoiles from "../components/Etoiles";
 import { useParams } from "react-router-dom";
 import dataB from "../Logement.json";
 import Slider from "../components/Slider";
-import Dropdown from "../components/Dropdown";
+import Collapse from "../components/Collapse";
 
 const Logement = () => {
   const { id } = useParams();
@@ -29,8 +29,8 @@ const Logement = () => {
             <h2>{dataDetails.title}</h2>
             <p>{dataDetails.location}</p>
             <ul className="tags">
-              {dataDetails.tags.map((tag) => (
-                <li>{tag}</li>
+              {dataDetails.tags.map((tag, index) => (
+                <li key={index}>{tag}</li>
               ))}
             </ul>
           </div>
@@ -47,7 +47,11 @@ const Logement = () => {
             </div>
           </div>
         </div>
-        <Dropdown data={dataDetails} />
+        <div className="rolling-container">
+          <Collapse data={dataDetails.description} title="Description" />
+          <Collapse data={dataDetails.equipments} title="Equipements" />
+          {/* <Dropdown data={dataDetails} /> */}
+        </div>
       </div>
       <Footer />
     </div>

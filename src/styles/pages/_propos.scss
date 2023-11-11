@@ -1,4 +1,6 @@
 main {
+
+
     .main-bg-propos {
         background: url("../../img/IMGbgpropos.jpg") lightgray 50% / cover no-repeat;
         border-radius: 25px;
@@ -8,73 +10,23 @@ main {
         @include verticalCenter;
     }
 
-    .info-container {
-        margin: 30.5px 0;
-        padding: 0 100px;
+    .propos-container {
+        padding: 20px 75px 40px;
+        color: $color-1;
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        gap: 30px;
-
-
-        .main-deroulant {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px 10px 10px;
-            border-radius: 10px;
-            background: $color-1;
-            color: $white-1;
-            cursor: pointer;
-            position: relative;
-
-            h2 {
-                cursor: pointer;
-                width: 100%;
-                font-size: 1rem;
-                font-weight: 500;
-            }
-
-            img {
-                width: 32px;
-                height: 32px;
-                transition: transform 0.3s ease;
-
-                &.collapsed {
-                    transform: rotate(180deg);
-                }
-                &.expanded {
-                    transform: rotate(0deg);
-                }
-            }
-
-
-        }
-        p {
-            background: $light-gray-1;
-            color: $color-1;
-            font-size: 1rem;
-            line-height: 25px;
-            padding: 0 8px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-
-        .dropdown-exit {
-            max-height: 250px;
-            padding: 15px 8px;
-            transition: padding 0.4s ease, max-height 0.4s ease;
-        }
+        gap: 25px;
+        margin-top: 25px;
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
     main {
         .main-bg-propos {
             height: 111px;
         }
 
-        .info-container {
+        .propos-container {
             padding: 0;
         }
     }

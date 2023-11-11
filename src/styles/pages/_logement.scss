@@ -57,6 +57,13 @@
             }
         }
     }
+
+    .rolling-container {
+    display: flex;
+    align-items:flex-start;
+    gap: 76px;
+    margin-top: 25px;
+    }
 }
 
 @media screen and (max-width: 1250px) {
@@ -65,7 +72,7 @@
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
     .header-img-container {
         padding: 0 20px;
         margin: 27px 0 0;
@@ -115,6 +122,10 @@
                     }
                 }
             }
+        }
+        .rolling-container {
+            flex-direction: column;
+            gap: 20px;
         }
     }
 }

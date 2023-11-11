@@ -5,7 +5,6 @@ import Star2 from "../assets/icones/starempty.png";
 const Etoiles = ({ rating }) => {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
-    console.log(`i: ${i}, rating: ${rating}`);
     stars.push(i <= rating ? Star1 : Star2);
   }
   return (
